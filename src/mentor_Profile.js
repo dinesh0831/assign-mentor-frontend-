@@ -19,7 +19,7 @@ function MentorProfile() {
     }
     useEffect(() => {
         getMentor()
-    }, [])
+    })
  
     return (
         <>
