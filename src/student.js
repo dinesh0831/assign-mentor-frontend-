@@ -14,7 +14,7 @@ class Student extends React.Component {
     }
     createStudent=async()=>{
         const {name,email,mobileno}=this.state
-        const response=await axios.post("http://localhost:3001/students",{name,email,mobileno})
+        const response=await axios.post("  https://assig-mentor.herokuapp.com/students",{name,email,mobileno})
         console.log(response.data)
         this.setState({name:"",email:"",mobileno:''})
     }
@@ -50,7 +50,7 @@ class Student extends React.Component {
                     <TextField id="outlined-password-input" label="Mobile No" type='text' name="mobileno" value={this.state.mobileno} onChange={this.handleChange} /><br />
                     <button>Create </button>
             </Box>
-            <img container width="1350" height="650" alt="library" src={image}/>
+            <img  width="1350" height="650" alt="library" src={image}/>
         </>
         )
     }

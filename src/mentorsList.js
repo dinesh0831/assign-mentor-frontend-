@@ -9,7 +9,7 @@ import { TableRow, TableHead, TableContainer, TableCell, TableBody, Table, Paper
 function MentorList() {
     const [detail,setDetail]=useState([])
     const getMentor = async () => {
-        const { data } = await axios.get("http://localhost:3001/mentor/getAll")
+        const { data } = await axios.get("  https://assig-mentor.herokuapp.com/mentor/getAll")
         console.log(data)
         setDetail(data)
 

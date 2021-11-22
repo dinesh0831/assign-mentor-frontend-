@@ -9,7 +9,7 @@ function MentorProfile() {
     const [student,setStudent]=useState([])
     const params = useParams()
     const getMentor = async () => {
-        const { data } = await axios.get(` https://assig-mentor.herokuapp.com/mentor/${params.id}/studentList`)
+        const { data } = await axios.get(`  https://assig-mentor.herokuapp.com/mentor/${params.id}/studentList`)
         console.log(data)
         setDetail(data)
         setStudent(data.studentList)
@@ -19,7 +19,7 @@ function MentorProfile() {
     }
     useEffect(() => {
         getMentor()
-    })
+    }, [])
  
     return (
         <>

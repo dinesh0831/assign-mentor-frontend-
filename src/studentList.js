@@ -8,7 +8,7 @@ import { TableRow, TableHead, TableContainer, TableCell, TableBody, Table, Paper
 function StudentList() {
     const [detail, setDetail] = useState([])
     const getStudent = async () => {
-        const { data } = await axios.get("http://localhost:3001/students/allStudent")
+        const { data } = await axios.get("  https://assig-mentor.herokuapp.com/students/allStudent")
         console.log(data)
         setDetail(data)
 

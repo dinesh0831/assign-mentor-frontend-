@@ -6,7 +6,7 @@ import {  TableRow, TableHead, TableContainer, TableCell, TableBody, Table, Pape
 function AssignStudent(){
     const [details,setDetail]=useState([])
     const getMentor = async () => {
-        const { data } = await axios.get("http://localhost:3001/students/unassigned")
+        const { data } = await axios.get("  https://assig-mentor.herokuapp.com/students/unassigned")
         console.log(data)
         setDetail(data)
 
@@ -16,15 +16,15 @@ function AssignStudent(){
     }, [])
 const params=useParams()
 const selectStudent=async(name,id)=>{
-   await axios.patch(`http://localhost:3001/mentor/${params.id}`,{
+   await axios.patch(`  https://assig-mentor.herokuapp.com/mentor/${params.id}`,{
         student:name
     })
     let detail=[...details]
     detail=detail.filter(rows=>name!==rows.name)
     setDetail(detail)
-    const {data}=await axios.get(`http://localhost:3001/mentor/${params.id}/studentList`)
+    const {data}=await axios.get(`  https://assig-mentor.herokuapp.com/mentor/${params.id}/studentList`)
     console.log(data)
-    await axios.patch(`http://localhost:3001/students/${id}`,{
+    await axios.patch(`  https://assig-mentor.herokuapp.com/students/${id}`,{
         mentor:data.name,
         assigned:"yes"
     })
