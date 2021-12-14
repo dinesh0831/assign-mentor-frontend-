@@ -42,7 +42,7 @@ const selectStudent=async(name,id)=>{
                 <TableHead>
                     <TableRow>
                         
-                        <TableCell align="center">name</TableCell>
+                        <TableCell align="center">Name</TableCell>
                         <TableCell align="center">Email</TableCell>
                         <TableCell align="center">Mobile No</TableCell>
                         <TableCell align="center">Select</TableCell>
@@ -52,7 +52,7 @@ const selectStudent=async(name,id)=>{
                 <TableBody>
                     {details.map((row) => (
                         <TableRow key={row._id}>
-                            <TableCell align="center">{row.name}</TableCell>
+                            <TableCell align="center">{row.name.toUpperCase()}</TableCell>
                             <TableCell align="center">{row.email}</TableCell>
                             <TableCell align="center">{row.mobileno}</TableCell>
                             <TableCell align="center"><Button onClick={()=>selectStudent(row.name,row._id)}>  select </Button></TableCell>

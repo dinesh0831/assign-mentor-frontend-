@@ -27,7 +27,7 @@ function StudentList() {
                         <TableHead>
                             <TableRow>
 
-                                <TableCell align="center">name</TableCell>
+                                <TableCell align="left">Name</TableCell>
                                 <TableCell align="center">Email</TableCell>
                                 <TableCell align="center">Mobile No</TableCell>
                                 <TableCell align="center">Mentor</TableCell>
@@ -37,7 +37,7 @@ function StudentList() {
                         <TableBody>
                             {detail.map((row) => (
                                 <TableRow key={row._id}>
-                                    <TableCell align="center">{row.name}</TableCell>
+                                    <TableCell align="left">{row.name.toUpperCase()}</TableCell>
                                     <TableCell align="center">{row.email}</TableCell>
                                     <TableCell align="center">{row.mobileno}</TableCell>
                                     <TableCell align="center">{row.mentor}</TableCell>

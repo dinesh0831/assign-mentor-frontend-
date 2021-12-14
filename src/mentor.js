@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import Menu from "./menubar";
-import image from "./asset/library.jpg"
+import image from "./asset/teacher.jpg"
 import { TextField, Box } from "@mui/material"
 class Mentor extends React.Component {
     constructor() {
@@ -50,7 +50,7 @@ class Mentor extends React.Component {
                         <TextField id="outlined-password-input" label="Mobile No" type='text' name="mobileno" value={this.state.mobileno} onChange={this.handleChange} /><br />
                         <button>Create </button>
                 </Box>
-                <img  width="1350" height="650" alt="library" src={image}/>
+                <img  width="100%" height="650" alt="library" src={image}/>
             </>
         )
     }

@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Menu from "./menubar"
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Grid,Box ,Typography, Card, CardMedia, CardContent, Paper, Table,TableCell, TableBody, TableContainer, TableHead, TableRow } from "@mui/material"
 function MentorProfile() {
     const [detail, setDetail] = useState([])
@@ -29,7 +29,7 @@ function MentorProfile() {
                 <Card sx={{ width: 250, height: "max-content" }}>
 
                     <CardMedia sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: 100 }} alt="green iguana">
-                        {/* <AccountCircleIcon sx={{ fontSize: 64 }} /> */}
+                        <AccountCircleIcon sx={{ fontSize: 64 }} />
                     </CardMedia>
 
                     <CardContent sx={{ display: "block", marginLeft: 6, marginRight: 5 }}>
@@ -48,7 +48,7 @@ function MentorProfile() {
                         <Table sx={{ minWidth: 700 }} aria-label="customized table">
                             <TableHead>
                                 <TableRow>
-                                    <TableCell align="left">Student name</TableCell>
+                                    <TableCell align="left"><Typography sx={{fontSize:"24"}}>Student Name</Typography></TableCell>
                                     
                                    
                                 </TableRow>
