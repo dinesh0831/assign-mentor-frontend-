@@ -6,7 +6,7 @@ function Home(){
     return(
         <>
         <Menu/>
-        <img  width="100%" alt="library" height="650" src={image}/>
+        <img  width="100%" alt="library" height="auto" src={image}/>
         </>
     )
 }
