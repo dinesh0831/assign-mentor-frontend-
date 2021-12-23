@@ -6,7 +6,7 @@ function Home(){
     return(
         <>
         <Menu/>
-        <img  width="100%" alt="library" height="auto" src={image}/>
+        <img  style={{height:"100vh",width:"100%",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundAttachment:"fixed",}} alt="library"  src={image}/>
         </>
     )
 }
