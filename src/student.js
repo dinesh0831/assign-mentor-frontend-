@@ -50,7 +50,7 @@ class Student extends React.Component {
                     <TextField id="outlined-password-input" label="Mobile No" type='text' name="mobileno" value={this.state.mobileno} onChange={this.handleChange} /><br />
                     <button>Create </button>
             </Box>
-            <img  width="100%" height="auto" alt="library" src={image}/>
+            <img  style={{height:"100vh",width:"100%",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundAttachment:"fixed",}} alt="library" src={image}/>
         </>
         )
     }
