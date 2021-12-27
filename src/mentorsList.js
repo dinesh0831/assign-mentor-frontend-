@@ -27,11 +27,11 @@ function MentorList() {
                 <TableHead>
                     <TableRow>
                         
-                        <TableCell align="left">Name</TableCell>
-                        <TableCell align="center">Email</TableCell>
-                        <TableCell align="center">Mobile No</TableCell>
-                        <TableCell align="center">Assigning</TableCell>
-                        <TableCell align="center">Profile</TableCell>
+                        <TableCell align="left" sx={{fontWeight:"bold",fontSize:"22"}}>Name</TableCell>
+                        <TableCell align="center" sx={{fontWeight:"bold",fontSize:"22"}}>Email</TableCell>
+                        <TableCell align="center" sx={{fontWeight:"bold",fontSize:"22"}}>Mobile No</TableCell>
+                        <TableCell align="center" sx={{fontWeight:"bold",fontSize:"22"}}>Assigning</TableCell>
+                        <TableCell align="center" sx={{fontWeight:"bold",fontSize:"22"}}>Profile</TableCell>
                       
                     </TableRow>
                 </TableHead>

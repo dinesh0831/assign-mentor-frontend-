@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Menu from "./menubar"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -8,7 +8,7 @@ function MentorProfile() {
     const [detail, setDetail] = useState([])
     const [student,setStudent]=useState([])
     const params = useParams()
-    const getMentor = async () => {
+    const getMentor =useCallback( async () => {
         const { data } = await axios.get(`  https://assig-mentor.herokuapp.com/mentor/${params.id}/studentList`)
         console.log(data)
         setDetail(data)
@@ -16,10 +16,10 @@ function MentorProfile() {
         
 
 
-    }
+    },[params.id])
     useEffect(() => {
         getMentor()
-    },)
+    }, [getMentor])
  
     return (
         <>
